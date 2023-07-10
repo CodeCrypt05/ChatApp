@@ -159,7 +159,6 @@ class _UserImagePickerState extends State<UserImagePicker> {
                     _showImagePicker(context);
                   } else {
                     print('no permission provided');
-                    return;
                   }
                 },
                 elevation: 2.0,

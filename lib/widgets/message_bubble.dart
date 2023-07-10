@@ -4,7 +4,7 @@ class MessageBubble extends StatelessWidget {
   const MessageBubble.first({
     super.key,
     required this.userImage,
-    required this.username,
+    required this.userName,
     required this.message,
     required this.isMe,
   }) : isFirstInSequence = true;
@@ -15,12 +15,12 @@ class MessageBubble extends StatelessWidget {
     required this.isMe,
   })  : isFirstInSequence = false,
         userImage = null,
-        username = null;
+        userName = null;
 
   final bool isFirstInSequence;
 
   final String? userImage;
-  final String? username;
+  final String? userName;
   final String message;
 
   final bool isMe;
@@ -54,14 +54,14 @@ class MessageBubble extends StatelessWidget {
                     isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: [
                   if (isFirstInSequence) const SizedBox(height: 18),
-                  if (username != null)
+                  if (userName != null)
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 13,
                         right: 13,
                       ),
                       child: Text(
-                        username!,
+                        userName!,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.black87,
